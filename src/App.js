@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
 
+import Footer from './Components/Footer'
+import Navbar1 from './Components/Navbar1'
+import Login from './Components/Login'
+import Register from './Components/Register'
+import {DataProvider} from './Components/DataProvider'
+
+import Detail from './Components/Detail'
+import Home from './Components/Home'
+import ManWatch from './Components/ManWatch'
+import WomenWatch from './Components/WomenWatch'
+import Cart from './Components/Cart'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <DataProvider>
+            <div className="App">
+             
+              <BrowserRouter>
+                <Navbar1/> 
+                
+                <Switch>
+                    <Route path='/' exact component={Home}></Route>
+                    <Route path='/manWatch' component={ManWatch}></Route>
+                    <Route path='/womenWatch' component={WomenWatch}></Route>
+                    <Route path="/login" component={Login}></Route>
+                    <Route path="/register" component={Register}></Route>
+                    <Route path="/product/:id" component={Detail}></Route>
+                    <Route path="/cart" component={Cart}></Route>
+                </Switch>
+                <Footer></Footer>
+              </BrowserRouter>
+            
+            </div>
+        </DataProvider>
+    
   );
 }
 
