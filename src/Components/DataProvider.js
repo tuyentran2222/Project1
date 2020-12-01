@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 export const DataContext=createContext();
 export const DataProvider=(props)=>{
     const [products,setProducts]=useState([
@@ -12,7 +12,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Citizen"
+            "trademark":"Citizen",
+            count:1
         },
         {
             "id":"2",
@@ -24,20 +25,22 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Casio"
+            "trademark":"Casio",
+            count:1
         },
         {
             "id":"3",
             "nameProduct":"Đồng hồ MTP-1374L",
             "image":"./ImgProduct/anh3.jpg",
             "description":"Đồng hồ nam Citizen AU1080-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
-            "discount":"0.1",
-            "price":"1863000 ",
+            "discount":0.1,
+            "price":1863000 ,
             "color":["black","gold"],
             "amount":"50"
             ,
             "sex":"male",
-            "trademark":"Casio"
+            "trademark":"Casio",
+            count:1
         },
         {
             "id":"4",
@@ -49,7 +52,9 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Citizen"
+            "trademark":"Citizen",
+            count:1
+           
         },
         {
             "id":"5",
@@ -61,7 +66,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Citizen"
+            "trademark":"Citizen",
+            count:1
         },
         {
             "id":"6",
@@ -73,7 +79,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Casio"
+            "trademark":"Casio",
+            count:1
         },
         {
             "id":"7",
@@ -85,7 +92,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"female",
-            "trademark":"Casio"
+            "trademark":"Casio",
+            count:1
         },
         {
             "id":"8",
@@ -97,7 +105,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"female",
-            "trademark":"Rotary"
+            "trademark":"Rotary",
+            count:1
         },
         {
             "id":"9",
@@ -109,7 +118,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"female",
-            "trademark":"Rotary"
+            "trademark":"Rotary",
+            count:1
         },
         {
             "id":"10",
@@ -121,7 +131,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Rotary"
+            "trademark":"Rotary",
+            count:1
         },
         {
             "id":"11",
@@ -133,7 +144,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"female",
-            "trademark":"Seiko"
+            "trademark":"Seiko",
+            count:1
         },
 
         {
@@ -146,7 +158,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Casio"
+            "trademark":"Casio",
+            count:1
         },
         {
             "id":"13",
@@ -158,7 +171,8 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":""
+            "trademark":"",
+            count:1
         },
         {
             "id":"14",
@@ -171,7 +185,8 @@ export const DataProvider=(props)=>{
             "amount":"50"
             ,
             "sex":"female",
-            "trademark":"Citizen"
+            "trademark":"Citizen",
+            count:1
 
         },
         {
@@ -184,17 +199,46 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"female",
-            "trademark":"Citizen"
+            "trademark":"Citizen",
+            count:1
         }
     ])
     const [cart,setCart]=useState([])
-
+    const [search,setSearch]=useState("");
+    const addCart=(id)=>{
+        //some để kiểm tra có ít nhât một phần tử có id là id thêm vào hay không
+        const check=cart.some(product=>{
+            console.log(product.id);
+            return product.id===id;
+            
+        })
+        console.log(check);
+        if (!check){
+            const data=products.filter(product=>{
+                return product.id===id
+            })
+            setCart([...cart,...data]);
+        }
+        else{
+            alert("Sản phẩm đã được thêm vào giỏ hàng");
+        }
+    }
+    /*useEffect(()=>{
+        localStorage.setItem('dataCart',JSON.stringify(cart))
+    }
+    )*/
+    console.log(cart);
     const value={
         products:[products,setProducts],
-        cart:[cart,setCart]
+        cart:[cart,setCart],
+        addCart:addCart,
+        search:[search,setSearch]
+        
+
     }
+    
     return (
-        <DataContext.Provider value={ [products,setProducts]}>
+        <DataContext.Provider value={value}>
             {props.children}
         </DataContext.Provider>
     )

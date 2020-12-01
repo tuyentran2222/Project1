@@ -13,6 +13,8 @@ import Home from './Components/Home'
 import ManWatch from './Components/ManWatch'
 import WomenWatch from './Components/WomenWatch'
 import Cart from './Components/Cart'
+import Search from './Components/Search'
+import SearchProducts from './Components/SearchProducts'
 function App() {
   return (
         <DataProvider>
@@ -20,9 +22,12 @@ function App() {
              
               <BrowserRouter>
                 <Navbar1/> 
+                <Search/>
                 
                 <Switch>
+
                     <Route path='/' exact component={Home}></Route>
+                    <Route path='/search' component={SearchProducts}></Route>
                     <Route path='/manWatch' component={ManWatch}></Route>
                     <Route path='/womenWatch' component={WomenWatch}></Route>
                     <Route path="/login" component={Login}></Route>

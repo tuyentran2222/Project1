@@ -100,3 +100,12 @@ ul li{
 }
 
 /*-------------footer--------*/
+/*-------------cart---------*/
+.detail{
+  position: relative;
+}
+.delete{
+  position: absolute;
+  right: 15px;
+  top:15px;
+}

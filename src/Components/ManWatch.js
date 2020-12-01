@@ -3,7 +3,9 @@ import {useContext} from 'react'
 import {DataContext} from './DataProvider'
 import ProductItem from './ProductItem'
 function ManWatch(){
-    const [products,setProducts] =useContext(DataContext);
+    const value =useContext(DataContext);
+    const [products]=value.products;
+    const addCart=value.addCart;
     const manWatch=products.filter((product,index)=>{
         return product.sex==="male";
     })
@@ -11,7 +13,7 @@ function ManWatch(){
     return(
         <div className="manWatch container" style={{marginTop:"40px"}}>
             <div className="title" style={{textTransform:'uppercase',fontSize:'30px'}}>Đồng hồ nam</div>
-            {manWatch.map((product,index)=>( <ProductItem item={product}/> ))}
+            {manWatch.map((product,index)=>( <ProductItem item={product} addCart={addCart}/> ))}
         </div>
     )
     

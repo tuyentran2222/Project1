@@ -4,7 +4,9 @@ import { DataContext} from './DataProvider'
 
 export default function Detail(){
     const {id}=useParams();
-    const [products,setProducts] =useContext(DataContext);
+    const value =useContext(DataContext);
+    const [products]=value.products;
+    const addCart=value.addCart;
     //filter
     const details=products.filter((product,index)=>{
         return product.id===id
@@ -34,7 +36,7 @@ export default function Detail(){
                                     ))
                                 }
                             </div>
-                            <button className="btn btn-info" style={{marginTop:'10px',marginBottom:'15px',marginRight:'15px'}}><i className="fas fa-cart-plus"></i></button>
+                            <button className="btn btn-info" style={{marginTop:'10px',marginBottom:'15px',marginRight:'15px'}} onClick={()=>addCart(id)}><i className="fas fa-cart-plus"></i></button>
                             <button className="btn btn-info" style={{marginTop:'10px',marginBottom:'15px'}}>Mua ngay</button>
                         </div>
                     </div>
