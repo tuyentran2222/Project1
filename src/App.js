@@ -19,15 +19,12 @@ function App() {
   return (
         <DataProvider>
             <div className="App">
-             
               <BrowserRouter>
                 <Navbar1/> 
-                <Search/>
-                
+                <Search/>   
                 <Switch>
-
                     <Route path='/' exact component={Home}></Route>
-                    <Route path='/search' component={SearchProducts}></Route>
+                    <Route path='/search/:find' component={SearchProducts}></Route>
                     <Route path='/manWatch' component={ManWatch}></Route>
                     <Route path='/womenWatch' component={WomenWatch}></Route>
                     <Route path="/login" component={Login}></Route>
@@ -36,8 +33,7 @@ function App() {
                     <Route path="/cart" component={Cart}></Route>
                 </Switch>
                 <Footer></Footer>
-              </BrowserRouter>
-            
+              </BrowserRouter>   
             </div>
         </DataProvider>
     

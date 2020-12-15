@@ -1,13 +1,12 @@
 import React,{useContext,useEffect,useState} from 'react'
-import { useParams } from 'react-router-dom'
+
 import { DataContext} from './DataProvider'
 
 export default function Cart(){
     
     const value =useContext(DataContext);
-    const [products]=value.products;
     const [cart,setCart]=value.cart;
-    const [total, setTotal] = useState(0)
+    const [total, setTotal] = useState(0);
     console.log(cart);
     const decrease = (id) => {
         cart.forEach(item =>{
@@ -72,9 +71,9 @@ export default function Cart(){
                         
                         <div className="col-lg-3 amount" style={{margin:'auto 0'}}>
                             <div>Số lượng</div>
-                            <button className="btn btn-success" onClick={() => decrease(product.id)}>-</button>
+                            <button className="btn btn-success btn-sm border-radius" onClick={() => decrease(product.id)}>-</button>
                             <span className="amountProduct">{product.count}</span>
-                            <button className="btn btn-success" onClick={() => increase(product.id)}>+</button>
+                            <button className="btn btn-success btn-sm " onClick={() => increase(product.id)}>+</button>
                         </div>
                         <div>
 

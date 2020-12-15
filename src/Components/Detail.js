@@ -1,6 +1,7 @@
 import React,{useContext} from 'react'
 import { useParams } from 'react-router-dom'
 import { DataContext} from './DataProvider'
+import ProductItem from './ProductItem';
 
 export default function Detail(){
     const {id}=useParams();
@@ -11,8 +12,9 @@ export default function Detail(){
     const details=products.filter((product,index)=>{
         return product.id===id
     })
-    console.log(details.length);
-    console.log(details[0].image);
+    const LQProduct=products.filter((product,index)=>{return (product.price> details[0].price-500000 && product.price<details[0].price+500000)})
+    console.log(LQProduct);
+    
     return(
         <div className="container" style={{marginTop:'40px'}}>
             
@@ -32,7 +34,7 @@ export default function Detail(){
                             <div className="colors">
                                 {
                                     product.color.map((cl,index)=>(
-                                        <button className="btn btn-success" style={{marginRight:'5px'}}>{cl}</button>
+                                        <button key={index} className="btn btn-success" style={{marginRight:'5px'}}>{cl}</button>
                                     ))
                                 }
                             </div>
@@ -41,7 +43,15 @@ export default function Detail(){
                         </div>
                     </div>
                 )) 
-            }   
+            }
+            <div style={{textTransform:'uppercase',fontSize:'30px',marginTop:'50px'}}>Các sản phẩm liên quan</div>
+            <div>
+                {
+                    LQProduct.map((product,key)=>(
+                        <ProductItem item={product} addCart={addCart}/> 
+                    ))
+                }           
+            </div>   
         
         </div>
     )

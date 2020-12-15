@@ -25,14 +25,14 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":"50",
             "sex":"male",
-            "trademark":"Casio",
+            "trademark":"Orient",
             count:1
         },
         {
             "id":"3",
-            "nameProduct":"Đồng hồ MTP-1374L",
+            "nameProduct":"Đồng hồ Casio 1374L",
             "image":"./ImgProduct/anh3.jpg",
-            "description":"Đồng hồ nam Citizen AU1080-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
+            "description":"Đồng hồ nam Casio 1374L nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
             "discount":0.1,
             "price":1863000 ,
             "color":["black","gold"],
@@ -58,9 +58,9 @@ export const DataProvider=(props)=>{
         },
         {
             "id":"5",
-            "nameProduct":"TISSOT T063.907.11.058.00",
+            "nameProduct":"Citizen T063.90",
             "image":"./ImgProduct/anh5.jpg",
-            "description":"Đồng hồ nam Citizen AU1080-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.TISSOT T063.907.11.058.00",
+            "description":"Đồng hồ nam Citizen T063.90 nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.TISSOT T063.907.11.058.00",
             "discount":"0.1",
             "price":"20000000",
             "color":["black","white","gold"],
@@ -203,8 +203,12 @@ export const DataProvider=(props)=>{
             count:1
         }
     ])
-    const [cart,setCart]=useState([])
+    const [cart,setCart]=useState([]);
     const [search,setSearch]=useState("");
+    const [sortProduct,setSortProduct]=useState("");
+    const [sortPrice,setSortPrice]=useState("");
+    const [ascPrice,setAscPrice]=useState(1);
+    const [lq,Setlq]=useState([]);
     const addCart=(id)=>{
         //some để kiểm tra có ít nhât một phần tử có id là id thêm vào hay không
         const check=cart.some(product=>{
@@ -220,7 +224,7 @@ export const DataProvider=(props)=>{
             setCart([...cart,...data]);
         }
         else{
-            alert("Sản phẩm đã được thêm vào giỏ hàng");
+            alert("Sản phẩm đã được thêm vào giỏ hàng trước đó.");
         }
     }
     /*useEffect(()=>{
@@ -232,9 +236,10 @@ export const DataProvider=(props)=>{
         products:[products,setProducts],
         cart:[cart,setCart],
         addCart:addCart,
-        search:[search,setSearch]
-        
-
+        search:[search,setSearch],
+        sort:[sortProduct,setSortProduct],
+        ASCPrice:[ascPrice,setAscPrice],
+        sortPrice:[sortPrice,setSortPrice]
     }
     
     return (
