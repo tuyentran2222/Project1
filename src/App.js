@@ -19,9 +19,9 @@ function App() {
   return (
         <DataProvider>
             <div className="App">
-              <BrowserRouter>
+              <BrowserRouter >
                 <Navbar1/> 
-                <Search/>   
+                <Search addSearchProducts />   
                 <Switch>
                     <Route path='/' exact component={Home}></Route>
                     <Route path='/search/:find' component={SearchProducts}></Route>

@@ -12,12 +12,14 @@ export default function Detail(){
     const details=products.filter((product,index)=>{
         return product.id===id
     })
-    const LQProduct=products.filter((product,index)=>{return (product.price> details[0].price-500000 && product.price<details[0].price+500000)})
-    console.log(LQProduct);
+    const LQProduct=products.filter(
+        (product,index)=>{
+            return (product.price> details[0].price-500000 && product.price<details[0].price+500000)
+        }
+    )
     
     return(
         <div className="container" style={{marginTop:'40px'}}>
-            
             <div className="titleDetail" style={{textTransform:'uppercase',fontSize:'30px',marginBottom:'25px'}}>Thông tin sản phẩm </div>
             {
                 details.map((product,index)=>(

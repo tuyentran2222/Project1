@@ -16,6 +16,5 @@ function ManWatch(){
             {manWatch.map((product,index)=>( <ProductItem item={product} addCart={addCart}/> ))}
         </div>
     )
-    
 }
 export default ManWatch;

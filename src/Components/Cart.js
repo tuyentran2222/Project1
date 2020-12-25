@@ -49,7 +49,7 @@ export default function Cart(){
     if (cart.length===0) return(
         <div className="container" style={{marginTop:'40px'}} >
             <div className="titleDetail" style={{textTransform:'uppercase',fontSize:'30px',marginBottom:'25px'}}>Thông tin giỏ hàng</div>
-             <div>Giỏ hàng chưa có sản phẩm</div>
+            <div>Giỏ hàng chưa có sản phẩm</div>
         </div> 
     )
 
@@ -85,9 +85,10 @@ export default function Cart(){
                     </div>
                 )) 
             }
-            <div className="total ">
+            <div className="total">
                 Tổng tiền:{total}
             </div>
+            
             <button>Đặt hàng</button> 
         
         </div>
