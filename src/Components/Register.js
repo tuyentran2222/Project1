@@ -48,9 +48,6 @@ class Register extends React.Component{
             this.setState({isPasswordAgainValid:false});
         }
         else this.setState({isPasswordAgainValid:true});
-        console.log("pass="+this.state.password);
-        console.log("passA="+this.state.passwordAgain);
-        console.log()
     }
 
     changeInputValue(e){
@@ -59,14 +56,12 @@ class Register extends React.Component{
                 [e.target.name]: e.target.value,    
             }  
         );
-        
     }
-
     render(){
         return(
-            <div className="row container-fluid" style={{marginTop:"40px",marginBottom:"40px"}}>
-                <div className="col-lg-3 col-md-2 col-sm-1"></div>
-                <div className="col-lg-6 col-md-8 col-sm-10">
+           
+                
+                <div className=" container col-lg-6 col-md-8 col-sm-10">
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Label style={{fontSize:"35px",fontWeight:"bolder"}}>Đăng ký</Form.Label>
 
@@ -97,18 +92,18 @@ class Register extends React.Component{
                         </Form.Row>
 
                         <Form.Row>
-                            <Form.Control className="control"type="password" placeholder="Xác nhận lại mật khẩu" name="passwordAgain"onChange={(e)=>this.changeInputValue(e)} required>
+                            <Form.Control className="control" type="password" placeholder="Xác nhận lại mật khẩu" name="passwordAgain" onChange={(e)=>this.changeInputValue(e)} required>
                             </Form.Control>
                             <FormText className="text-danger">{!this.state.isPasswordAgainValid? this.state.passwordAgainErr:''}  </FormText>
                         </Form.Row>
                     
                         <Button style={{marginTop:'10px' }}block size="lg" type="submit" onClick={this.validateForm}>
-                    Đăng ký
-                    </Button>
+                            Đăng ký
+                        </Button>
                     </Form>
                 </div>
-                <div className="col-lg-3 col-md-2 col-sm-1"></div>
-            </div>
+                
+            
             
         );
     }

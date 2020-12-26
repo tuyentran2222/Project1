@@ -8,7 +8,7 @@ export default function SearchProducts(){
     const {find}=useParams();
     const addCart =value.addCart;
     const searchProducts= products.filter(
-        (product,index)=> (product.description.toUpperCase().includes(find.toUpperCase())||product.trademark.toUpperCase().includes(find.toUpperCase()))
+        (product)=> (product.description.toUpperCase().includes(find.toUpperCase())||product.trademark.toUpperCase().includes(find.toUpperCase()))
     );  
     console.log(searchProducts);
     

@@ -10,9 +10,9 @@ class ProductItem extends React.Component {
     }
     render(){ 
         return(  
-            <div className="card item card col-lg-3  col-md-4 col-sm-5" key={this.props.item.id}style={{width: "100%",border:'1px solid black',marginLeft:'2.5%',display:'inline-block' ,marginTop:'40px',boxShadow:'1px 1px 4px 1px black'}}>
+            <div className="card card-item col-lg-3 item col-md-4 col-sm-12" id="item" key={this.props.item.id}>
                 <Link to={this.state.link+this.props.item.id}>
-                    <Image className="col-lg-12" src={'.'+this.props.item.image} alt="Card image" />
+                    <Image className="col-lg-12 img" src={'.'+this.props.item.image} alt="Card image" />
                 </Link>
                 <div className="card-body col-lg-12" style={{borderTop:'1px solid black'}}> 
                     <p className="card-title col-lg-12" style={{fontSize:'14px'}}>{this.props.item.nameProduct}</p>
@@ -25,8 +25,11 @@ class ProductItem extends React.Component {
                         <button className="btn btn-danger col-lg-12" >Xem chi tiết</button>  
                     </Link>
                     <Link>
-                        <button className="btn btn-success col-lg-12" onClick={()=>this.props.addCart(this.props.item.id)} ><i className="fas fa-cart-plus"></i></button>
+                        <button className="btn btn-success col-lg-12 txt" onClick={()=>this.props.addCart(this.props.item.id)} ><i className="fas fa-cart-plus"></i></button>
                     </Link>
+                </div>
+                <div className="discountLabel">
+                    {this.props.item.discount*100}%
                 </div>
             </div>        
         );

@@ -8,7 +8,7 @@ function Products() {
     const addCart=value.addCart;
     return(
             <div className="product container">
-                {products.map((product,key)=>( <ProductItem key={key} item={product} addCart={addCart}/> ))}
+                {products.map((product,key)=>(  <ProductItem key={key} item={product} addCart={addCart}/> ))}
             </div>
     );
 }

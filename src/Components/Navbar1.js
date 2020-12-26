@@ -16,7 +16,7 @@ export default function Navbar1() {
     }
 
     return (
-        <header>
+        <header style={{position:"relative"}}>
             <div className="menu" onClick={toggleMenu}>
                 <i className="fas fa-bars" style={{fontSize:'30px'}}></i>
             </div>
@@ -40,6 +40,13 @@ export default function Navbar1() {
                     <i className="fas fa-cart-plus" style={{fontSize:'30px'}}></i>
                 </Link>
             </div>
+            <div className="cart-ic">
+                <span>{cart.length}</span>
+                <Link to="/cart">
+                    <i className="fas fa-cart-plus" style={{fontSize:'30px'}}></i>
+                </Link>
+            </div>
+
             
       </header>
     )

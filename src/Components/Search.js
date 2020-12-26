@@ -14,13 +14,12 @@ class Search extends React.Component{
     }
     render(){
         return(
-            <div className="Search container " style={{marginBottom:'20px'}}>
-                <div className="row">
-                    <div className="col-lg-2 col-md-1"></div>
-                    <input className="search col-lg-6 col-md-8 col-sm-9" type="text" placeholder="Tìm kiếm" name="search"  value={this.state.search} onChange={(e)=>this.setSearch(e)}></input>
-                    <Link className="col-lg-2 col-md-3 col-sm-3" to={this.state.link+this.state.search}><button className="searchBtn btn btn-primary ">Tìm kiếm</button></Link>
+           
+                <div className="container col-lg-6 col-md-8 col-sm-11" style={{marginBottom:'15px'}}>
+                    <input className="col-lg-9 col-md-8 col-sm-8" type="text" placeholder="Tìm kiếm" name="search"  value={this.state.search} style={{height:'40px',marginBottom:'5px'}} onChange={(e)=>this.setSearch(e)} ></input>
+                    <Link className="col-lg-3 col-md-4 col-sm-2" to={this.state.link+this.state.search}><button className="searchBtn btn btn-primary" >Tìm kiếm</button></Link>
                 </div>
-            </div>
+           
         )
     }      
 }

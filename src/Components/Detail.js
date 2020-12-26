@@ -10,7 +10,7 @@ export default function Detail(){
     const addCart=value.addCart;
     //filter
     const details=products.filter((product,index)=>{
-        return product.id===id
+        return product.id===id;
     })
     const LQProduct=products.filter(
         (product,index)=>{
@@ -20,7 +20,7 @@ export default function Detail(){
     
     return(
         <div className="container" style={{marginTop:'40px'}}>
-            <div className="titleDetail" style={{textTransform:'uppercase',fontSize:'30px',marginBottom:'25px'}}>Thông tin sản phẩm </div>
+            <div className="titleDetail" >Thông tin sản phẩm </div>
             {
                 details.map((product,index)=>(
                     <div className="detail row border" key={index} >
@@ -40,17 +40,17 @@ export default function Detail(){
                                     ))
                                 }
                             </div>
-                            <button className="btn btn-info" style={{marginTop:'10px',marginBottom:'15px',marginRight:'15px'}} onClick={()=>addCart(id)}><i className="fas fa-cart-plus"></i></button>
-                            <button className="btn btn-info" style={{marginTop:'10px',marginBottom:'15px'}}>Mua ngay</button>
+                            <button className="btn btn-info btn-cart"  onClick={()=>addCart(id)}><i className="fas fa-cart-plus"></i></button>
+                            <button className="btn btn-info btn-buy">Mua ngay</button>
                         </div>
                     </div>
                 )) 
             }
-            <div style={{textTransform:'uppercase',fontSize:'30px',marginTop:'50px'}}>Các sản phẩm liên quan</div>
+            <div className="titleDetail" style={{marginTop:'50px'}}>Các sản phẩm liên quan</div>
             <div>
                 {
                     LQProduct.map((product,key)=>(
-                        <ProductItem item={product} addCart={addCart}/> 
+                        <ProductItem item={product} key={key} addCart={addCart}/> 
                     ))
                 }           
             </div>   

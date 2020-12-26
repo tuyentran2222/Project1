@@ -13,9 +13,8 @@ function WomenWatch(){
     return(
         <div className="manWatch container" style={{marginTop:"40px"}}>
             <div className="title" style={{textTransform:'uppercase',fontSize:'30px'}}>Đồng hồ nữ</div>
-            {womanWatch.map(product=>( <ProductItem item={product} addCart={addCart}/> ))}
+            {womanWatch.map((product,key)=>( <ProductItem item={product} key={key} addCart={addCart}/> ))}
         </div>
     )
-    
 }
 export default WomenWatch;

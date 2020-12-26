@@ -37,7 +37,7 @@ export default function Cart(){
     useEffect(() =>{
         const getTotal = () => {
             const res = cart.reduce((prev, item) => {
-                return prev + (item.price * item.count)
+                return prev + (item.price * item.count*(1-item.discount))
             },0)
             setTotal(res)
         }
@@ -47,24 +47,24 @@ export default function Cart(){
         
     
     if (cart.length===0) return(
-        <div className="container" style={{marginTop:'40px'}} >
-            <div className="titleDetail" style={{textTransform:'uppercase',fontSize:'30px',marginBottom:'25px'}}>Thông tin giỏ hàng</div>
+        <div className="container Cart" style={{marginTop:'40px'}} >
+            <div className="titleDetail">Thông tin giỏ hàng</div>
             <div>Giỏ hàng chưa có sản phẩm</div>
         </div> 
     )
 
     return(
-        <div className="container Cart" style={{marginTop:'40px'}}>
+        <div className="container Cart col-lg-8" style={{marginTop:'40px'}}>
             
-            <div className="titleDetail" style={{textTransform:'uppercase',fontSize:'30px',marginBottom:'25px'}}>Thông tin giỏ hàng</div>
+            <div className="titleDetail" >Thông tin giỏ hàng</div>
             {
                 cart.map((product,index)=>(
                     <div className="detail row border" key={index} >
-                        <div className="col-lg-2 col-md-12 col-sm-8" >
+                        <div className="col-lg-2 col-md-12 col-sm-12" >
                             <img src={'.'+product.image} alt="watch" style={{minWidth:'150px',maxHeight:'150px'}}></img>
                         </div>
 
-                        <div className="col-lg-4 col-md-12 " style={{textAlign:'left',lineHeight:'30px',margin:'auto 0',textAlign:'center'}}>
+                        <div className="col-lg-4 col-md-12 info">
                             <div>Tên sản phẩm: {product.nameProduct}</div>
                             <div>Giá khuyến mãi: {product.price*(1-product.discount)}đ</div> 
                         </div>
@@ -72,13 +72,13 @@ export default function Cart(){
                         <div className="col-lg-3 amount" style={{margin:'auto 0'}}>
                             <div>Số lượng</div>
                             <button className="btn btn-success btn-sm border-radius" onClick={() => decrease(product.id)}>-</button>
-                            <span className="amountProduct">{product.count}</span>
+                            <span className="amountProduct" style={{marginLeft:'10px',marginRight:'10px'}}>{product.count}</span>
                             <button className="btn btn-success btn-sm " onClick={() => increase(product.id)}>+</button>
                         </div>
                         <div>
 
                         </div>
-                        <div className="delete" style={{margin:'auto 0',color:'red'}} onClick={() => removeProduct(product.id) }>
+                        <div className="delete"  onClick={() => removeProduct(product.id) }>
                             <i className="fas fa-times"></i>
                         </div>
 

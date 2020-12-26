@@ -57,15 +57,16 @@ class SortProduct extends React.Component{
     render(){
         return (
             <>
-                <div className="row sortProduct">
-                    <div className="col-lg-6">
-                        <div>sắp xếp theo giá</div>
+                <div className="container sortProduct row">
+                    <div className="col-lg-2"></div>
+                    <div className="col-lg-5" style={{textAlign:'left'}}>
+                        <div>Sắp xếp theo giá</div>
                         <select id="price" onChange={this.onChangePriceLevel}>
                             <option value={0}>Sắp xếp theo giá tiền tăng dần</option>
                             <option value={1}>Sắp xếp theo giá tiền giảm dần</option>
                         </select>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-4"  style={{textAlign:'left'}}>
                         <div>Giá tiền</div>
                         <select onChange={this.onChangePrice}>
                             <option value={3}>Tất cả</option>
@@ -75,9 +76,9 @@ class SortProduct extends React.Component{
                         </select>
                     </div>
                 </div>
-                <div className="title" style={{textTransform:'uppercase',fontSize:'30px'}}>Kết quả tìm kiếm</div>
+                <div className="titleDetail" style={{marginTop:'35px'}}>Kết quả tìm kiếm</div>
                 {  
-                    this.state.SortProducts.map((product,index)=>( <ProductItem item={product} addCart={this.props.addCart} />))
+                    this.state.SortProducts.map((product,index)=>( <ProductItem item={product} key={index} addCart={this.props.addCart} />))
                 } 
 
             </>  

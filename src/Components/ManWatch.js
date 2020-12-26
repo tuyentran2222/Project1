@@ -12,8 +12,8 @@ function ManWatch(){
     console.log(manWatch);
     return(
         <div className="manWatch container" style={{marginTop:"40px"}}>
-            <div className="title" style={{textTransform:'uppercase',fontSize:'30px'}}>Đồng hồ nam</div>
-            {manWatch.map((product,index)=>( <ProductItem item={product} addCart={addCart}/> ))}
+            <div className="titleDetail" >Đồng hồ nam</div>
+            {manWatch.map((product,index)=>( <ProductItem item={product} key={index} addCart={addCart}/> ))}
         </div>
     )
 }

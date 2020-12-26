@@ -1,13 +1,11 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
-
 import Footer from './Components/Footer'
 import Navbar1 from './Components/Navbar1'
 import Login from './Components/Login'
 import Register from './Components/Register'
 import {DataProvider} from './Components/DataProvider'
-
 import Detail from './Components/Detail'
 import Home from './Components/Home'
 import ManWatch from './Components/ManWatch'
@@ -21,7 +19,7 @@ function App() {
             <div className="App">
               <BrowserRouter >
                 <Navbar1/> 
-                <Search addSearchProducts />   
+                <Search/>   
                 <Switch>
                     <Route path='/' exact component={Home}></Route>
                     <Route path='/search/:find' component={SearchProducts}></Route>
