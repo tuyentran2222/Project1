@@ -45,8 +45,12 @@ Project chia làm các gói như sau:
 
 ## ĐIỀU HƯỚNG.
 
-
 ![dieuhuong](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/dieuhuong.png)
+
+## KẾT LUẬN.
+
+Trên kia là toàn bộ sản phẩm của project của em.
+Project còn nhiều thiếu sót mong thầy bổ sung thêm ý kiến để project thêm hoàn thiện hơn.
 
 
 
