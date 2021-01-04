@@ -46,6 +46,7 @@ Project chia làm các gói như sau:
 ## ĐIỀU HƯỚNG.
 
 
+![dieuhuong](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/dieuhuong.png)
 
 
 
