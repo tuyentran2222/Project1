@@ -1,3 +1,9 @@
+# Project:Cửa hàng đồng hồ
+
+## Phạm vi:Front-end
+
+### Công nghệ sử dụng: Reactjs,react-router,react-hook,react-bootrap
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
