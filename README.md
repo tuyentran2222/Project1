@@ -8,13 +8,27 @@
 ## CẤU TRÚC PROJECT
 Project chia làm các gói như sau:
   * public :chứa các hình ảnh của các sản phẩm, icon ,file index.html
+
+  * src:chứa mã nguồn.
   
-  * src:chứa mã nguồn 
-    ** components: chứa các component của project.
-    ** ImageSlideShow:chứa hình ảnh của SlideShow.
-    ** font-awesome: icon 
-    
 ## CÁC CHỨC NĂNG CHÍNH CỦA CHƯƠNG TRÌNH.
+* **Chức năng 1:** Kiểm tra form đăng nhập, đăng ký.
+
+* **Chức năng 2.** Hiển thị thông tin chi tiết sản phẩm,hiển thị các sản phẩm liên quan.
+
+* **Chức năng 3:** Thêm,xóa,thay đổi số lượng sản phẩm vào giỏ hàng.
+
+* **Chức năng 4:** Tìm kiếm sản phẩm(hiển thị gợi ý khi tìm kiếm).
+
+* **Chức năng 5:** Sắp xếp sản phẩm theo các tiêu chí.
+
+## MỘT SỐ GIAO DIỆN KHÁC.
+
+
+
+## ĐIỀU HƯỚNG.
+
+
 
 
 
