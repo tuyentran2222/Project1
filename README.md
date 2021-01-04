@@ -14,17 +14,34 @@ Project chia làm các gói như sau:
 ## CÁC CHỨC NĂNG CHÍNH CỦA CHƯƠNG TRÌNH.
 * **Chức năng 1:** Kiểm tra form đăng nhập, đăng ký.
 
+![dangky](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/dangky.png)
+
 * **Chức năng 2.** Hiển thị thông tin chi tiết sản phẩm,hiển thị các sản phẩm liên quan.
+
+
+ ![chtietsp](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/chitietsp.png)
 
 * **Chức năng 3:** Thêm,xóa,thay đổi số lượng sản phẩm vào giỏ hàng.
 
+
+ ![giohang](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/giohang.png)
+
 * **Chức năng 4:** Tìm kiếm sản phẩm(hiển thị gợi ý khi tìm kiếm).
 
+  ![timkiem](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/timkiem.png)
+  
 * **Chức năng 5:** Sắp xếp sản phẩm theo các tiêu chí.
 
+ ![sapxep](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/sapxep.png)
+
 ## MỘT SỐ GIAO DIỆN KHÁC.
+* **Giao diện chính**
 
+ ![giaodienchinh](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/giaodienchinh.png)
 
+* **Liên hệ** 
+
+![lienhe](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/lienhe.png)
 
 ## ĐIỀU HƯỚNG.
 
