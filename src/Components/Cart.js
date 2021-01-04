@@ -1,9 +1,8 @@
 import React,{useContext,useEffect,useState} from 'react'
-
+import {Link} from 'react-router-dom'
 import { DataContext} from './DataProvider'
 
 export default function Cart(){
-    
     const value =useContext(DataContext);
     const [cart,setCart]=value.cart;
     const [total, setTotal] = useState(0);
@@ -49,7 +48,12 @@ export default function Cart(){
     if (cart.length===0) return(
         <div className="container Cart" style={{marginTop:'40px'}} >
             <div className="titleDetail">Thông tin giỏ hàng</div>
-            <div>Giỏ hàng chưa có sản phẩm</div>
+            <div><i className="fab fa-opencart" style={{fontSize:'75px'}}></i></div>
+            <h3 style={{marginTop:'40px'}}>
+                Túi mua sắm của bạn trống
+            </h3>
+            <p>Bạn không có mặt hàng nào trong giỏ hàng. Hãy đi mua thứ gì đó!</p>
+             
         </div> 
     )
 
@@ -89,7 +93,7 @@ export default function Cart(){
                 Tổng tiền:{total}
             </div>
             
-            <button>Đặt hàng</button> 
+            <Link to='/order'><button>Đặt hàng</button> </Link>
         
         </div>
     )

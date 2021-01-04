@@ -13,6 +13,9 @@ import WomenWatch from './Components/WomenWatch'
 import Cart from './Components/Cart'
 import Search from './Components/Search'
 import SearchProducts from './Components/SearchProducts'
+import NotFound from './Components/NotFound';
+import Order from './Components/Order'
+import Contact from './Components/Contact';
 function App() {
   return (
         <DataProvider>
@@ -29,12 +32,14 @@ function App() {
                     <Route path="/register" component={Register}></Route>
                     <Route path="/product/:id" component={Detail}></Route>
                     <Route path="/cart" component={Cart}></Route>
+                    <Route path="/notfound" component={NotFound}></Route>
+                    <Route path="/order" component={Order}></Route>
+                    <Route path="/contact" component={Contact}></Route>
                 </Switch>
                 <Footer></Footer>
               </BrowserRouter>   
             </div>
         </DataProvider>
-    
   );
 }
 

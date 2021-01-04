@@ -20,21 +20,21 @@ class Footer extends React.Component{
                             <div className="col-sm-4">
                                 <div className="list-group group">
                                     <h5>VẤN ĐỀ GẶP PHẢI</h5>
-                                    <NavLink className="navlink" to="/a" activeClassName="selected">Quên mật khẩu?</NavLink>
-                                    <NavLink className="navlink" to="/a" activeClassName="selected">Cách tạo một tài khoản mới</NavLink>
-                                    <NavLink className="navlink" to="/a" activeClassName="selected">Điều khoản</NavLink>
-                                    <NavLink className="navlink" to="/a" activeClassName="selected">Cam kết</NavLink>
-                                    <NavLink className="navlink" to="/a" activeClassName="selected">Chính sách hoàn trả</NavLink>
+                                    <NavLink className="navlink" to="/notfound" activeClassName="selected">Quên mật khẩu?</NavLink>
+                                    <NavLink className="navlink" to="/notfound" activeClassName="selected">Cách tạo một tài khoản mới</NavLink>
+                                    <NavLink className="navlink" to="/notfound" activeClassName="selected">Điều khoản</NavLink>
+                                    <NavLink className="navlink" to="/notfound" activeClassName="selected">Cam kết</NavLink>
+                                    <NavLink className="navlink" to="/notfound" activeClassName="selected">Chính sách hoàn trả</NavLink>
                                 </div>
                             
                             </div>
                             <div className="col-sm-5">
                                 <div className="list-group group">
                                     <h5>THÔNG TIN LIÊN HỆ</h5>
-                                    <p className="navlink">ĐỊA CHỈ:SỐ 256,GIẢI PHÓNG,HAI BÀ TRƯNG,HÀ NỘI. </p>
-                                    <p className="navlink">SỐ ĐIỆN THOẠI:0834925098</p>
+                                    <p className="navlink">Địa chỉ: Số 1,Giải Phóng,Hai Bà Trưng,Hà Nội</p>
+                                    <p className="navlink">Số điện thoại:0834925098</p>
                                     
-                                    <p className="navlink">EMAIL: <a style={{fontSize:"13px",textTransform:'lowercase'}} href="mailto:tuyen.tv184012@sis.hust.edu.vn" >tuyen.tv184012@sis.hust.edu.vn</a></p>
+                                    <p className="navlink">Email: <a style={{fontSize:"13px",textTransform:'none'}} href="mailto:tuyen.tv184012@sis.hust.edu.vn" >tuyen.tv184012@sis.hust.edu.vn</a></p>
                                 </div>
                             
                             </div>

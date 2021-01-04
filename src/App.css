@@ -1,19 +1,18 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
-  
 }
 
 .navlink{
   text-decoration: none;
   border: none;
+  font-family: Arial, sans-serif;;
+  font-size: 14px;
+  text-transform: none;
 }
-
 .control{
   margin-top:10px;
 }
-
-
 .card col-lg-2 col-sm-4 col-md-3{
   width: 100% ;
   border:1px solid black;
@@ -101,11 +100,6 @@ ul li{
   }
 
 }
-.cart-ic{
-    position: absolute;
-    bottom: 50px;
-    right: 35px;
-}
 
 /*-------------cart---------*/
 .detail{
@@ -162,12 +156,14 @@ ul li{
 .item{
   width: 100%;
   position: relative;
-  border:1px solid black;
+  border:1px solid  rgba(109,207,246,.5);
   margin-left: 2.5%;
   display: inline-block;
   margin-top: 40px;
-  box-shadow: 1px 1px 4px 1px black;
- 
+  -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  box-shadow: 0 0 5px rgba(109,207,246,.5);
+  font-size: 12px;
 }
 .discountLabel{
   width:20%;
@@ -179,6 +175,7 @@ ul li{
 div.item:hover{
   border:1px solid gray;
   box-shadow: 1px 1px 4px 1px gray;
+  
 }
 .img{
   position: relative;
@@ -186,4 +183,126 @@ div.item:hover{
 .img:hover{
   transform: scale(0.9);
   transition: all ease-in-out 0.5s;
+}
+@media (max-width: 1920px){
+  .item{
+    width: 20%;
+  }
+}
+@media (max-width: 1200px){
+  .item{
+    width: 30%;
+  }
+}
+@media (max-width: 800px){
+  .item{
+    width: 45%;
+  }
+}
+/*-------------NotFound--------------*/
+.notfound{
+  height:300px;
+  padding-top: 60px;
+  font-size: 35px;
+  background-color:#FFFF;
+  text-transform: none;
+}
+/*-------------Search--------*/
+
+.inputSearch{
+  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  border: solid 1px #ccc;
+  padding: 9px 10px 9px 32px;
+
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  height: 40px;
+  margin-bottom: 5px;
+  border-radius: 10em;
+  outline: none;
+  position: relative;
+}
+.inputSearch:focus{
+  background-color: #fff;
+  border-color: #66CC75;
+  -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  box-shadow: 0 0 5px rgba(109,207,246,.5);  
+}
+.searchBtn{
+  background-color: black;
+  border: none;
+  color:white;
+  text-align: center;
+  font-size: 16px; 
+  opacity: 0.6;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  height:40px;
+  width: 40px;
+  right:14%;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+}
+.searchBtn:hover{
+  opacity: 1;
+}
+
+.autoCombo-box{
+  position: absolute;
+  z-index: 9999;
+  background-color:#EDEDED;
+  
+ 
+}
+.autoCombo-box .keyItem{
+  list-style: none;
+  text-align: left;
+  text-indent: 35px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  
+}
+.autoCombo-box .keyItem:hover{
+  background-color: coral;
+  border:3px solid red;
+}
+
+
+
+/*----------grid----------------------*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 20%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*---------------Contact-------------*/
+.address{
+   border-bottom:1px solid black;
+   padding-bottom:25px
+}
+.phoneContact{
+  border-bottom:1px solid black;
+  margin-top:15px;
+  margin-bottom:25px;
+  padding-bottom:25px
+}
+.emailContact{
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
 }

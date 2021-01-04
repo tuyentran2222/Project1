@@ -13,7 +13,7 @@ export const DataProvider=(props)=>{
             "amount":50,
             "sex":"male",
             "trademark":"Citizen",
-            count:1
+            count:1,
         },
         {
             "id":"2",
@@ -36,7 +36,7 @@ export const DataProvider=(props)=>{
             "discount":0.1,
             "price":1863000 ,
             "color":["black","gold"],
-            "amount":"50"
+            "amount":50
             ,
             "sex":"male",
             "trademark":"Casio",
@@ -54,7 +54,7 @@ export const DataProvider=(props)=>{
             "sex":"male",
             "trademark":"Citizen",
             count:1
-           
+            
         },
         {
             "id":"5",
@@ -132,6 +132,7 @@ export const DataProvider=(props)=>{
             "amount":50,
             "sex":"male",
             "trademark":"Rotary",
+            "keyword":["Đồng hồ nam","Rotary","Đồng hồ Rotary"],
             count:1
         },
         {
@@ -203,7 +204,23 @@ export const DataProvider=(props)=>{
             count:1
         }
     ])
-    const [cart,setCart]=useState([]);
+    const keyWord=[
+            "Đồng hồ",
+            "Đồng hồ nam",
+            "Đồng hồ nữ",
+            "Đồng hồ đôi",
+            "Đồng hồ Citizen",
+            "Đồng hồ Casio",
+            "Đồng hồ Seiko",
+            "Đồng hồ Rotary",
+            "Citizen",
+            "Casio",
+            "Seiko",
+            "Rotary",
+            "Đồng hồ dưới 5 triệu đồng",
+            "Mẫu đồng hồ mới nhất"
+    ]
+    const [cart,setCart]=useState(JSON.parse(localStorage.getItem('dataCart')));
 
     const addCart=(id)=>{
         //some để kiểm tra có ít nhât một phần tử có id là id thêm vào hay không
@@ -215,7 +232,7 @@ export const DataProvider=(props)=>{
         console.log(check);
         if (!check){
             const data=products.filter(product=>{
-                return product.id===id
+                return product.id===id;
             })
             setCart([...cart,...data]);
         }
@@ -224,15 +241,17 @@ export const DataProvider=(props)=>{
         }
     }
 
-    /*useEffect(()=>{
-        localStorage.setItem('dataCart',JSON.stringify(cart))
+    useEffect(()=>{
+        localStorage.setItem('dataCart',JSON.stringify(cart));
+        //console.log(JSON.parse(localStorage.getItem('dataCart')))
     }
-    )*/
-   
+    )
+
     const value={
         products:[products,setProducts],
         cart:[cart,setCart],
         addCart:addCart,
+        keyword:keyWord
     }
     
     return (

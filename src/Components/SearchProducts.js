@@ -11,7 +11,6 @@ export default function SearchProducts(){
         (product)=> (product.description.toUpperCase().includes(find.toUpperCase())||product.trademark.toUpperCase().includes(find.toUpperCase()))
     );  
     console.log(searchProducts);
-    
     return (
         <div>
             <div className="container" style={{marginTop:"40px"}}>

@@ -5,11 +5,14 @@ class SortProduct extends React.Component{
         super(props);
         this.state={
             SortProducts:this.props.searchP
-        }
+        }  
         this.onChangePrice=this.onChangePrice.bind(this);
         this.onChangePriceLevel=this.onChangePriceLevel.bind(this);
     }
+
     onChangePriceLevel(event){
+        
+        console.log(this.props.searchP);
         const val=event.target.value;
         let sProduct=[...this.props.searchP];
         if (val==='0'){
@@ -26,6 +29,7 @@ class SortProduct extends React.Component{
         }
     }
     onChangePrice(event){
+        
         const val=event.target.value;
         let sProduct=[...this.props.searchP];
         let ssProduct;
@@ -51,12 +55,11 @@ class SortProduct extends React.Component{
             this.setState({SortProducts:[...sProduct]});
         }
     }
-
-
-
     render(){
         return (
             <>
+            
+            {console.log(this.state.SortProducts)}
                 <div className="container sortProduct row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-5" style={{textAlign:'left'}}>
@@ -77,8 +80,8 @@ class SortProduct extends React.Component{
                     </div>
                 </div>
                 <div className="titleDetail" style={{marginTop:'35px'}}>Kết quả tìm kiếm</div>
-                {  
-                    this.state.SortProducts.map((product,index)=>( <ProductItem item={product} key={index} addCart={this.props.addCart} />))
+                {   
+                    this.state.SortProducts.map((product,index)=>(<ProductItem item={product} key={index} addCart={this.props.addCart} />))
                 } 
 
             </>  
