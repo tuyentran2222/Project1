@@ -2,7 +2,7 @@
 
 ## Môn học: Project 1
 ## Phạm vi:Front-end
-### Công nghệ sử dụng: Reactjs,react-router,react-hook,react-bootrap
+### Công nghệ sử dụng: Reactjs,react-router,react-hook,react-boostrap
 ## GIỚI THIỆU
 Đây là sản phẩm bài tập lớn môn học Project 1.
 ## CẤU TRÚC PROJECT
