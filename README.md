@@ -52,7 +52,7 @@ Khởi chạy thử nghiệm ở chế độ xem tương tác.
 ## VIDEO DEMO
 Dưới đây là video demo sản phẩm project 1.
 
-![video](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/media/chitietsp.png)
+![video](https://youtu.be/hLqPwApHFec)
 
 ## KẾT LUẬN.
 
