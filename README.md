@@ -6,12 +6,12 @@
 * Sinh viên thực hiện: Trần Văn Tuyền
 * MSSV: 20184012
 ## PHẠM VI ĐỀ TÀI
-Frontend
+> **Frontend**
 
 ## GIỚI THIỆU
-Đây là sản phẩm bài tập lớn môn học Project 1.
+> Đây là sản phẩm bài tập lớn môn học Project 1.
 ## MỤC TIÊU
-Sử dụng Reactjs để xây dựng giao diện một web bán đồng hồ với một số chức năng sau:
+> Sử dụng Reactjs để xây dựng giao diện một web bán đồng hồ với một số chức năng sau:
 * Kiểm tra form đăng nhập.
 * Đăng ký tài khoản.
 * Xem thông tin chi tiết sản phẩm.
