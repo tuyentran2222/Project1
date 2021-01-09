@@ -40,13 +40,13 @@ Sử dụng Reactjs để xây dựng giao diện một web bán đồng hồ v�
 
 
 ## HƯỚNG DẪN SỬ DỤNG
-Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
-**npm start**
-Chạy ứng dụng ở chế độ phát triển.
+#### Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
+* **npm start**
+*Chạy ứng dụng ở chế độ phát triển.
 Mở http://localhost:3000 để xem trong trình duyệt.
 Trang sẽ tải lại nếu chúng ta thực hiện chỉnh sửa.
 Chúng ta cũng sẽ thấy bất kỳ lỗi sơ suất nào trong console.
-**npm test**
+* **npm test**
 Khởi chạy thử nghiệm ở chế độ xem tương tác.
 
 ## VIDEO DEMO
