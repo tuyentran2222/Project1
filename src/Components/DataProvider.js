@@ -36,8 +36,7 @@ export const DataProvider=(props)=>{
             "discount":0.1,
             "price":1863000 ,
             "color":["black","gold"],
-            "amount":50
-            ,
+            "amount":50,
             "sex":"male",
             "trademark":"Casio",
             count:1
@@ -86,7 +85,7 @@ export const DataProvider=(props)=>{
             "id":"7",
             "nameProduct":"Casio LTP-V005D-2B3UDF",
             "image":"./ImgProduct/anh7.jpg",
-            "description":"Đồng hồ nam Citizen AU1080-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
+            "description":"Đồng hồ nam Casio LTP-V005D-2B3UDF nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
             "discount":0.2,
             "price":2100000,
             "color":["black","white","gold"],
@@ -172,14 +171,14 @@ export const DataProvider=(props)=>{
             "color":["black","white","gold"],
             "amount":50,
             "sex":"male",
-            "trademark":"",
+            "trademark":"Citizen",
             count:1
         },
         {
             "id":"14",
-            "nameProduct":"CITIZEN AU1080-20A",
+            "nameProduct":"CITIZEN AU1158-20A",
             "image":"./ImgProduct/anh14.jpg",
-            "description":"Đồng hồ nam Citizen AU1080-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
+            "description":"Đồng hồ nam Citizen AU1158-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
             "discount":0.25,
             "price":1800000,
             "color":["black","white","gold"],
@@ -192,9 +191,9 @@ export const DataProvider=(props)=>{
         },
         {
             "id":15,
-            "nameProduct":"CITIZEN AU1080-20A",
+            "nameProduct":"CITIZEN AU2200-20A",
             "image":"./ImgProduct/anh15.jpg",
-            "description":"Đồng hồ nam Citizen AU1080-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
+            "description":"Đồng hồ nam Citizen AU2200-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
             "discount":0.1,
             "price":200000,
             "color":["black","white","gold"],
@@ -220,7 +219,9 @@ export const DataProvider=(props)=>{
             "Đồng hồ dưới 5 triệu đồng",
             "Mẫu đồng hồ mới nhất"
     ]
-    const [cart,setCart]=useState(JSON.parse(localStorage.getItem('dataCart')));
+    const a=JSON.parse(localStorage.getItem('dataCart'));
+    const b= (a===null)?[]:a;
+    const [cart,setCart]=useState(b);
 
     const addCart=(id)=>{
         //some để kiểm tra có ít nhât một phần tử có id là id thêm vào hay không

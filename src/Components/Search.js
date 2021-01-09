@@ -9,7 +9,7 @@ function Search(){
     const [autoCombobox,setAutoComboBox]=useState([]);
     function onClickKeyWord(item){
         setSearch(item.target.innerText);
-        console.log(search);
+        //console.log(search);
     }
     function show(e){
         let s=document.getElementById('combo');

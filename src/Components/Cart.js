@@ -6,7 +6,7 @@ export default function Cart(){
     const value =useContext(DataContext);
     const [cart,setCart]=value.cart;
     const [total, setTotal] = useState(0);
-    console.log(cart);
+    //console.log(cart);
     const decrease = (id) => {
         cart.forEach(item =>{
             if(item.id === id){

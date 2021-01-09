@@ -19,10 +19,13 @@ class ProductItem extends React.Component {
                     <div className="row" style={{fontSize:'12px'}}>
                         <div className="col-lg-6 col-sm-12">{this.props.item.price*(1-this.props.item.discount)}</div>
                         <div className="col-lg-6 col-sm-12"><b style={{textDecoration:'line-through'}}>{this.props.item.price}</b></div>
-                    </div>        
-                    <Link to={this.state.link+this.props.item.id} href="#header">
-                        <button className="btn btn-danger col-lg-12"style={{fontSize:'12px'}} >Xem chi tiết</button>  
-                    </Link>
+                    </div>
+                    <a>
+                        <Link to={this.state.link+this.props.item.id} href="#header">
+                            <button className="btn btn-danger col-lg-12"style={{fontSize:'12px'}} >Xem chi tiết</button>  
+                        </Link>
+                    </a>        
+                    
                     
                         <button className="btn btn-success col-lg-12 txt" onClick={()=>this.props.addCart(this.props.item.id)} ><i className="fas fa-cart-plus" style={{fontSize:'12px'}}></i></button>
                     

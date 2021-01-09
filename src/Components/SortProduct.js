@@ -4,15 +4,21 @@ class SortProduct extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            SortProducts:this.props.searchP
+            SortProducts:this.props.searchP,
+            constantProduct:this.props.searchP
         }  
         this.onChangePrice=this.onChangePrice.bind(this);
         this.onChangePriceLevel=this.onChangePriceLevel.bind(this);
     }
 
+    static getDerivedStateFromProps(nextProps, prevState){
+        if(nextProps.searchP !==prevState.constantProduct){
+          return { SortProducts: nextProps.searchP};
+       }
+       
+     }
+     
     onChangePriceLevel(event){
-        
-        console.log(this.props.searchP);
         const val=event.target.value;
         let sProduct=[...this.props.searchP];
         if (val==='0'){
@@ -28,8 +34,8 @@ class SortProduct extends React.Component{
             this.setState({SortProducts:[...sProduct]});
         }
     }
+
     onChangePrice(event){
-        
         const val=event.target.value;
         let sProduct=[...this.props.searchP];
         let ssProduct;
@@ -58,8 +64,6 @@ class SortProduct extends React.Component{
     render(){
         return (
             <>
-            
-            {console.log(this.state.SortProducts)}
                 <div className="container sortProduct row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-5" style={{textAlign:'left'}}>
