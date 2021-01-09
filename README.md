@@ -1,4 +1,4 @@
-# PROJECT: CỬA HÀNG ĐỒNG HỒ
+# PROJECT: WEB BÁN ĐỒNG HỒ
 
 ## MÔN HỌC: PROJECT 1
 
