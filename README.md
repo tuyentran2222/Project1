@@ -2,50 +2,52 @@
 
 ## Môn học: Project 1
 ## Phạm vi:Front-end
-### Công nghệ sử dụng: Reactjs,react-router,react-hook,react-boostrap
+
 ## GIỚI THIỆU
 Đây là sản phẩm bài tập lớn môn học Project 1.
-## CẤU TRÚC PROJECT
-Project chia làm các gói như sau:
-  * public :chứa các hình ảnh của các sản phẩm, icon ,file index.html
+## MỤC TIÊU
+Sử dụng Reactjs để xây dựng giao diện một web bán đồng hồ với một số chức năng sau:
+* Kiểm tra form đăng nhập.
+* Đăng ký tài khoản.
+* Xem thông tin chi tiết sản phẩm.
+* Thêm sản phẩm vào giỏ hàng,thay đổi số lượng sản phẩm.
+* Xóa sản phẩm khỏi giỏ hàng.
+* Tìm kiếm sản phẩm.
+* Sắp xếp sản phẩm theo giá.
+* Lọc sản phẩm theo giá.
+ 
+## CÔNG NGHỆ SỬ DỤNG
+* Reactjs
+* react-router
+* react-hook
+* react-boostrap
+* CSS
 
-  * src:chứa mã nguồn.
-  
-## CÁC CHỨC NĂNG CHÍNH CỦA CHƯƠNG TRÌNH.
-* **Chức năng 1:** Kiểm tra form đăng nhập, đăng ký.
-
-![dangky](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/dangky.png)
-
-* **Chức năng 2.** Hiển thị thông tin chi tiết sản phẩm,hiển thị các sản phẩm liên quan.
-
-
- ![chtietsp](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/chitietsp.png)
-
-* **Chức năng 3:** Thêm,xóa,thay đổi số lượng sản phẩm vào giỏ hàng.
+## YÊU CẦU TRƯỚC KHI CÀI ĐẶT
+ Có phần mềm Visual Studio Code
+ 
+## HƯỚNG DẪN CÀI ĐẶT
+#### Tải mã nguồn
+* Download mã nguồn bằng git: nhập câu lệnh "git clone https://github.com/tuyentran2222/project1_cuahangdongho" hoặc download file zip về máy rồi giải nén.
+* Mở folder vừa tải bằng Visual Studio Code.
+#### Thêm môi trường để chạy chương trình.
 
 
- ![giohang](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/giohang.png)
 
-* **Chức năng 4:** Tìm kiếm sản phẩm(hiển thị gợi ý khi tìm kiếm).
+## HƯỚNG DẪN SỬ DỤNG
+Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
+**npm start**
+Chạy ứng dụng ở chế độ phát triển.
+Mở http://localhost:3000 để xem trong trình duyệt.
+Trang sẽ tải lại nếu chúng ta thực hiện chỉnh sửa.
+Chúng ta cũng sẽ thấy bất kỳ lỗi sơ suất nào trong console.
+**npm test**
+Khởi chạy thử nghiệm ở chế độ xem tương tác.
 
-  ![timkiem](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/timkiem.png)
-  
-* **Chức năng 5:** Sắp xếp sản phẩm theo các tiêu chí.
+## VIDEO DEMO
+Dưới đây là video demo sản phẩm project 1.
 
- ![sapxep](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/sapxep.png)
-
-## MỘT SỐ GIAO DIỆN KHÁC.
-* **Giao diện chính**
-
- ![giaodienchinh](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/giaodienchinh.png)
-
-* **Liên hệ** 
-
-![lienhe](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/lienhe.png)
-
-## ĐIỀU HƯỚNG.
-
-![dieuhuong](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/ImageProject/dieuhuong.png)
+![video](https://github.com/tuyentran2222/project1_cuahangdongho/blob/master/media/chitietsp.png)
 
 ## KẾT LUẬN.
 
