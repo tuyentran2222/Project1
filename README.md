@@ -1,12 +1,12 @@
-# Project:Cửa hàng đồng hồ
+# PROJECT: CỬA HÀNG ĐỒNG HỒ
 
-## Môn học: Project 1
+## MÔN HỌC: PROJECT 1
 
 * Giảng viên hướng dẫn: TS. Đào Thành Chung
 * Sinh viên thực hiện: Trần Văn Tuyền
 * MSSV: 20184012
-
-## Phạm vi:Front-end
+## PHẠM VI ĐỀ TÀI
+Frontend
 
 ## GIỚI THIỆU
 Đây là sản phẩm bài tập lớn môn học Project 1.
@@ -37,31 +37,31 @@ Sử dụng Reactjs để xây dựng giao diện một web bán đồng hồ v�
 > * Mở folder vừa tải bằng Visual Studio Code.
 #### Thêm môi trường để chạy chương trình.
  Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
-* **npm install -g create-react-app**
- > Câu lệnh trên giúp bạn nên thiết lập Môi trường React trên máy tính của mình.
+>* **npm install -g create-react-app**
+ >> Câu lệnh trên giúp bạn nên thiết lập Môi trường React trên máy tính của mình.
 
- > Create-react-app là một cách được hỗ trợ chính thức để tạo các ứng dụng React.
+ >> Create-react-app là một cách được hỗ trợ chính thức để tạo các ứng dụng React.
 
- > Sau đó nhập câu lệnh
+ >> Sau đó nhập câu lệnh
 
-* **npm install react-router-dom**
- > Câu lệnh giúp cài đặt bộ định tuyến trên React.
+> * **npm install react-router-dom**
+ >> Câu lệnh giúp cài đặt bộ định tuyến trên React.
 
 
 ## HƯỚNG DẪN SỬ DỤNG
 Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
-* **npm start**
+>* **npm start**
  
- > Chạy ứng dụng ở chế độ phát triển.
+ >> Chạy ứng dụng ở chế độ phát triển.
  
- > Mở http://localhost:3000 để xem trong trình duyệt.
+ >> Mở http://localhost:3000 để xem trong trình duyệt.
  
- > Trang sẽ tải lại nếu chúng ta thực hiện chỉnh sửa.
+ >> Trang sẽ tải lại nếu chúng ta thực hiện chỉnh sửa.
  
- > Chúng ta cũng sẽ thấy bất kỳ lỗi sơ suất nào trong console.
-* **npm test**
+ >> Chúng ta cũng sẽ thấy bất kỳ lỗi sơ suất nào trong console.
+>* **npm test**
 
- > Khởi chạy thử nghiệm ở chế độ xem tương tác.
+ >> Khởi chạy thử nghiệm ở chế độ xem tương tác.
 
 ## VIDEO DEMO
 
