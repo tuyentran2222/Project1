@@ -22,7 +22,7 @@ Sử dụng Reactjs để xây dựng giao diện một web bán đồng hồ v�
 * Lọc sản phẩm theo giá.
  
 ## CÔNG NGHỆ SỬ DỤNG
-* Reactjs
+* React
 * react-router
 * react-hook
 * react-boostrap
@@ -33,14 +33,23 @@ Sử dụng Reactjs để xây dựng giao diện một web bán đồng hồ v�
  
 ## HƯỚNG DẪN CÀI ĐẶT
 #### Tải mã nguồn
-* Download mã nguồn bằng git: nhập câu lệnh "git clone https://github.com/tuyentran2222/project1_cuahangdongho" hoặc download file zip về máy rồi giải nén.
-* Mở folder vừa tải bằng Visual Studio Code.
+> * Download mã nguồn bằng git: nhập câu lệnh "git clone https://github.com/tuyentran2222/project1_cuahangdongho" hoặc download file zip về máy rồi giải nén.
+> * Mở folder vừa tải bằng Visual Studio Code.
 #### Thêm môi trường để chạy chương trình.
+ Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
+* **npm install -g create-react-app**
+ > Câu lệnh trên giúp bạn nên thiết lập Môi trường React trên máy tính của mình.
 
+ > Create-react-app là một cách được hỗ trợ chính thức để tạo các ứng dụng React.
+
+ > Sau đó nhập câu lệnh
+
+* **npm install react-router-dom**
+ > Câu lệnh giúp cài đặt bộ định tuyến trên React.
 
 
 ## HƯỚNG DẪN SỬ DỤNG
-#### Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
+Trên thanh công cụ của Visual Studio Code, chọn new terminal sau đó nhập câu lệnh
 * **npm start**
  
  > Chạy ứng dụng ở chế độ phát triển.
