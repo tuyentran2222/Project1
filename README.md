@@ -1,6 +1,11 @@
 # Project:Cửa hàng đồng hồ
 
 ## Môn học: Project 1
+
+Giảng viên hướng dẫn: TS. Đào Thành Chung
+Sinh viên thực hiện: Trần Văn Tuyền
+MSSV: 20184012
+
 ## Phạm vi:Front-end
 
 ## GIỚI THIỆU
